@@ -1,4 +1,7 @@
 //FILE DI STILE GENERALE
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700;900&display=swap');
+@import 'Vars.scss';
+
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +9,12 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
 }
 
 .wrapper {
     width: 70%;
     margin: 0 auto;
 }
+
