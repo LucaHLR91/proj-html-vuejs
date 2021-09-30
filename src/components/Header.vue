@@ -105,6 +105,7 @@ export default {
                            border: none;
                            border-radius: 5px;
                            background-color: $brand_color;
+                           cursor: pointer;
                        }
                    }
                 }
@@ -145,6 +146,7 @@ export default {
                     background-color: $brand_color;
                     border: none;
                     border-radius: 5px;
+                    cursor: pointer;
                 }
             }
     }
