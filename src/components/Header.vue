@@ -70,6 +70,7 @@ export default {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin-left: 20px;
             }
 
             .primary_nav {
@@ -118,7 +119,7 @@ export default {
                 flex-direction: column;
                 justify-content: center;
                 align-items: flex-start;
-                padding: 130px;
+                padding: 170px 150px;
 
                 h1 {
                     color: $primary_text_color;
