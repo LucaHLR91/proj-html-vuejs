@@ -1,6 +1,17 @@
 <template>
   <main>
+    <section id="welcome">
 
+    </section>
+    <section id="doctors">
+
+    </section>
+    <section id="services">
+
+    </section>
+    <section id="facilities">
+
+    </section>
   </main>
 </template>
 
@@ -11,5 +22,5 @@ export default {
 </script>
 
 <style lang="scss">
-
+@import '../style/General.scss';
 </style>
