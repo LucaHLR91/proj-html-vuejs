@@ -32,7 +32,7 @@
         <div class="medical_departments">
           <h4>Medical Departments</h4>
           <ul>
-            <li v-for="(link, index) in footer_nav" :key="index"><i class="fas fa-chevron-circle-right"></i><a href="#">{{link.text}}</a></li>
+            <li v-for="(link, index) in footer_nav" :key="index"><i :class="link.arrow"></i><a href="#">{{link.text}}</a></li>
           </ul>
           <button>Wiew Our Departments</button>
         </div>
@@ -63,18 +63,23 @@ export default {
         footer_nav: [
           {
             text: 'Cardiology',
+            arrow: 'fas fa-chevron-circle-right',
           },
           {
             text: 'Pediatrics',
+            arrow: 'fas fa-chevron-circle-right',
           },
           {
             text: 'Diabetes Care',
+            arrow: 'fas fa-chevron-circle-right',
           },
           {
             text: 'Pre-natel Care',
+            arrow: 'fas fa-chevron-circle-right',
           },
           {
             text: 'Ultrasound Echocardiogram',
+            arrow: 'fas fa-chevron-circle-right',
           },
         ]
       }
