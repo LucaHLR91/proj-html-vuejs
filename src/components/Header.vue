@@ -71,6 +71,7 @@ export default {
                 justify-content: center;
                 align-items: center;
                 margin-left: 20px;
+                cursor: pointer;
             }
 
             .primary_nav {
