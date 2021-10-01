@@ -10,10 +10,10 @@
           </div>
           <div class="brand_social_accounts">
             <h5>Learn More About US</h5>
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-twitter-square"></i>
-            <i class="fab fa-youtube-square"></i>
-            <i class="fab fa-instagram-square"></i>
+            <i class="fab fa-facebook-square facebook"></i>
+            <i class="fab fa-twitter-square twitter"></i>
+            <i class="fab fa-youtube-square youtube"></i>
+            <i class="fab fa-instagram-square instagram"></i>
           </div>
         </div>
 
@@ -63,7 +63,6 @@ export default {
 footer {
   width: 100%;
   height: 500px;
-  background-color: black;
 
   .footer_top {
     display: flex;
@@ -71,8 +70,44 @@ footer {
     align-items: center;
     color: $secondary_text_color;
 
-    .brand_info {
+    .footer_brand_info {
       width: calc(100% / 3);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .footer_logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      p {
+        margin-left: 20px;
+      }
+
+      .brand_social_accounts {
+        width: 100%;
+        border-top : 1px solid $secondary_text_color;
+
+        .facebook {
+          color:#0F92F3;
+        }
+
+        .twitter {
+          color: #119AFB;
+        }
+
+        .youtube {
+          color: #cc201f;
+        }
+
+        .instagram {
+          color: #1D56A2;
+        }
+      }
     }
 
     .footer_brand_contacts {
