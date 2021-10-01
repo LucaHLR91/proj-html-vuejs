@@ -6,10 +6,10 @@
             <img src="../assets/img/medical_logo_1x_dark.png" alt="Logo">
           </div>
           <div class="footer_brand_description">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam inventore eveniet placeat at quidem sit quas excepturi ipsum magni quaerat. Officia itaque quibusdam magni ducimus totam quos, cumque soluta sunt?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam inventore eveniet placeat at quidem sit quas excepturi ipsum magni quaerat. Officia itaque quibusdam magni ducimus totam quos, cumque soluta sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore deleniti dignissimos fugit hic, neque amet eveniet incidunt nostrum totam odio minus nam, voluptate ut cumque iusto omnis vel officia dolorem.</p>
           </div>
           <div class="brand_social_accounts">
-            <h5>Learn More About US</h5>
+            <h4>Learn More About US</h4>
             <i class="fab fa-facebook-square facebook"></i>
             <i class="fab fa-twitter-square twitter"></i>
             <i class="fab fa-youtube-square youtube"></i>
@@ -24,13 +24,17 @@
             <span>121 King Street, London United Kingdom</span>
           </div>
           <div>
-          <i class="fas fa-phone"></i>
-          <span>1.800.458.556</span>
+            <i class="fas fa-phone"></i>
+            <span>1.800.458.556</span>
           </div>
         </div>
 
-        <div class="medical_deparments">
+        <div class="medical_departments">
           <h4>Medical Departments</h4>
+          <ul>
+            <li v-for="(link, index) in footer_nav" :key="index"><i class="fas fa-chevron-circle-right"></i><a href="#">{{link.text}}</a></li>
+          </ul>
+          <button>Wiew Our Departments</button>
         </div>
       </section>
 
@@ -53,7 +57,28 @@
 
 <script>
 export default {
-    name: 'Footer'
+    name: 'Footer',
+    data() {
+      return {
+        footer_nav: [
+          {
+            text: 'Cardiology',
+          },
+          {
+            text: 'Pediatrics',
+          },
+          {
+            text: 'Diabetes Care',
+          },
+          {
+            text: 'Pre-natel Care',
+          },
+          {
+            text: 'Ultrasound Echocardiogram',
+          },
+        ]
+      }
+    }
 }
 </script>
 
@@ -67,7 +92,8 @@ footer {
   .footer_top {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+    height: 90%;
     color: $secondary_text_color;
 
     .footer_brand_info {
@@ -76,21 +102,36 @@ footer {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
+      padding: 20px;
 
       .footer_logo {
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        margin-bottom: 10px;
       }
 
       p {
-        margin-left: 20px;
+        width: 100%;
+        margin-bottom: 15px;
       }
 
       .brand_social_accounts {
         width: 100%;
         border-top : 1px solid $secondary_text_color;
+        margin-top: 10px;
+
+        h4 {
+          text-transform: uppercase;
+          margin-top: 5px;
+        }
+
+        i {
+          margin-right: 5px;
+          margin-top: 10px;
+          font-size: 25px;
+        }
 
         .facebook {
           color:#0F92F3;
@@ -112,10 +153,53 @@ footer {
 
     .footer_brand_contacts {
       width: calc(100% / 3);
+      padding: 20px;
+
+      h4 {
+        margin-bottom: 50px;
+        text-transform: uppercase;
+      }
+
+      i {
+        color: $brand_color;
+        margin-right: 15px;
+      }
     }
 
     .medical_departments {
       width: calc(100% / 3);
+      padding: 20px;
+
+      h4 {
+        margin-bottom: 50px;
+        text-transform: uppercase;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          i {
+            color: $brand_color;
+          }
+
+          a { 
+            margin-left: 10px;
+            text-decoration: none;
+            color: $secondary_text_color;
+          }
+        }
+
+        
+      }
+
+      button {
+        margin-top: 50px;
+        background-color: white;
+        padding: 10px 30px;
+        border: 1px soldi black;
+        cursor: pointer;
+      }
     }
   }
 
