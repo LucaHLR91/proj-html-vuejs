@@ -7,6 +7,7 @@
             </div>
 
             <nav class="primary_nav">
+                <!-- GENERO DINAMICAMENTE I VARI LIST ITEM DEL NAV TRAMITE UN OGGETO NEL DATA -->
                 <ul>
                     <li v-for="(link, index) in nav" :key="index"><a :class="(link.current) ? 'active' : null" href="#">{{link.text}}</a></li>
                     <li><button>Make an appointment</button></li>
