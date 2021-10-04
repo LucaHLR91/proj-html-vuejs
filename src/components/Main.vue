@@ -59,10 +59,11 @@
     </section>
     <section id="facilities">
       <div class="facilities_top">
-        <div class="facilities_info">
-          <div class="wrapper">
-            
-          </div>
+        <div class="facilities_info wrapper">
+          <img src="../assets/img/icon-7.png" alt="icon">
+          <h2>Tour Our Facilities</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?</p>
+          <img src="../assets/img/play-icon.png" alt="play-icon">
         </div>
         <div class="facilities_exellence">
 
@@ -350,6 +351,43 @@ export default {
     p {
       line-height: 40px;
       color: $secondary_text_color;
+    }
+  }
+}
+
+.facilities_top {
+  width: 100%;
+  background-image: url('../assets/img/paralax-bg-tour-facilities.jpg');
+
+  .facilities_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+
+    h2 {
+      font-size: 50px;
+      font-weight: 300;
+      color: $primary_text_color;
+      text-transform: uppercase;
+      margin: 20px 0 30px;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 65%;
+        height: 1px;
+        background-color: $primary_text_color;
+        margin: 15px 0 0 70px;
+    }
+  }
+
+    p {
+      width: 40%;
+      color: $primary_text_color;
+      line-height: 35px;
     }
   }
 }
