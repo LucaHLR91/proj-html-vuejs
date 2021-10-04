@@ -66,6 +66,7 @@
           <img src="../assets/img/play-icon.png" alt="play-icon">
         </div>
         <div class="facilities_excellences">
+          <!-- CICLO V-FOR PER CREARE LE CARTE DELLE ECCELLENZE -->
           <div v-for="(excellence, index) in excellences" :key="index" class="excellence" :class="excellence.background">
             <h4>{{excellence.title}}</h4>
             <img :src="require(`../${excellence.img}`)" alt="wave">
@@ -75,7 +76,12 @@
         </div>
       </div>
       <div class="facilities_bottom">
+        <div class="facilities_form wrapper">
+          
+        </div>
+        <div class="facilities_partners">
 
+        </div>
       </div>
     </section>
   </main>
@@ -427,7 +433,7 @@ export default {
       width: calc(100% / 3);
 
       h4 {
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 300;
         color: $primary_text_color;
         padding: 30px;  
@@ -436,7 +442,8 @@ export default {
       p {
         color: $primary_text_color;
         line-height: 40px;
-        padding: 10px; 
+        padding: 10px 15px; 
+        text-align: center;
       }
 
       button {
