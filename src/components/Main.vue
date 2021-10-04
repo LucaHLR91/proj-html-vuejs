@@ -65,8 +65,13 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?</p>
           <img src="../assets/img/play-icon.png" alt="play-icon">
         </div>
-        <div class="facilities_exellence">
-
+        <div class="facilities_excellences">
+          <div v-for="(excellence, index) in excellences" :key="index" class="excellence" :class="excellence.background">
+            <h4>{{excellence.title}}</h4>
+            <img :src="require(`../${excellence.img}`)" alt="wave">
+            <p>{{excellence.text}}</p>
+            <button>Learn more</button>
+          </div>
         </div>
       </div>
       <div class="facilities_bottom">
@@ -164,6 +169,26 @@ export default {
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?',
           },
         ],
+        excellences: [
+          {
+            title: 'Emergency care',
+            img: 'assets/img/wave-divider.png',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus',
+            background: 'pelourous',
+          },
+          {
+            title: 'Expert diagnostics',
+            img: 'assets/img/wave-divider.png',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus',
+            background: 'pelourous_ciano',
+          },
+          {
+            title: 'Superb rehabilitation',
+            img: 'assets/img/wave-divider.png',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus',
+            background: 'pelourous_blue',
+          },
+        ]
       }
     }
 }
@@ -381,8 +406,8 @@ export default {
         height: 1px;
         background-color: $primary_text_color;
         margin: 15px 0 0 70px;
+      }
     }
-  }
 
     p {
       width: 40%;
@@ -390,5 +415,40 @@ export default {
       line-height: 35px;
     }
   }
+
+  .facilities_excellences {
+    display: flex;
+
+    .excellence {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: calc(100% / 3);
+
+      h4 {
+        font-size: 30px;
+        font-weight: 300;
+        color: $primary_text_color;
+        padding: 30px;  
+      }
+
+      p {
+        color: $primary_text_color;
+        line-height: 40px;
+        padding: 10px; 
+      }
+
+      button {
+        border: 1px solid white;;
+        background-color: transparent;
+        color: $primary_text_color;
+        text-transform: uppercase;
+        padding: 10px 30px;
+        margin: 10px 0 40px 0;
+      }
+    }
+  }
+
 }
 </style>
