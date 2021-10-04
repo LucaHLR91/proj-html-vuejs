@@ -137,22 +137,6 @@ footer {
           margin-top: 10px;
           font-size: 25px;
         }
-
-        .facebook {
-          color:#0F92F3;
-        }
-
-        .twitter {
-          color: #119AFB;
-        }
-
-        .youtube {
-          color: #cc201f;
-        }
-
-        .instagram {
-          color: #1D56A2;
-        }
       }
     }
 

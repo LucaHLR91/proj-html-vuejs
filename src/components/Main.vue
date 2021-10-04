@@ -24,7 +24,17 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?</p>
         </div>
         <div class="doctors_bottom">
-
+          <div v-for="(doctor, index) in doctors" :key="index" class="doctor_card">
+            <img :src="require(`../${doctor.img}`)" alt="immagine">
+            <h4>{{doctor.name}}</h4>
+            <h5>{{doctor.profession}}</h5>
+            <p>{{doctor.biography}}</p>
+            <div>
+              <i :class="doctor.facebook" class="facebook"></i>
+              <i :class="doctor.twitter" class="twitter"></i>
+              <i :class="doctor.instagram" class="instagram"></i>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -63,6 +73,35 @@ export default {
             img: 'assets/img/icon-4.png',
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius distinctio iste'
           },
+        ],
+        doctors: [
+          {
+            name: 'Jon Snow',
+            profession: 'Anesthesiologist',
+            biography: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?',
+            facebook: 'fab fa-facebook-square',
+            twitter: 'fab fa-twitter-square',
+            instagram: 'fab fa-instagram-square',
+            img: 'assets/img/doctor-1.jpg',
+          },
+           {
+            name: 'Tony Stark',
+            profession: 'Cardiologist',
+            biography: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?',
+            facebook: 'fab fa-facebook-square',
+            twitter: 'fab fa-twitter-square',
+            instagram: 'fab fa-instagram-square',
+            img: 'assets/img/doctor-2.jpg',
+          },
+           {
+            name: 'Anna Smith',
+            profession: 'Nurse Practitioner',
+            biography: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?',
+            facebook: 'fab fa-facebook-square',
+            twitter: 'fab fa-twitter-square',
+            instagram: 'fab fa-instagram-square',
+            img: 'assets/img/doctor-3.jpg',
+          },
         ]
       }
     }
@@ -88,7 +127,7 @@ export default {
   h2 {
     font-size: 30px;
     font-weight: 300;
-    color: $secondary_text_color;
+    color: $primary_title_color;
   }
 
   p {
@@ -110,7 +149,7 @@ export default {
     h3 {
       font-weight: 300;
       text-transform: uppercase;
-      color: $secondary_text_color;
+      color: $primary_title_color;
       padding: 10px 0;
     }
 
@@ -135,8 +174,9 @@ export default {
   padding: 40px;
 
   h2 {
+    font-size: 50px;
     font-weight: 300;
-    color: $secondary_text_color;
+    color: $primary_title_color;
     text-transform: uppercase;
     margin: 20px 0 30px;
 
@@ -146,7 +186,7 @@ export default {
       width: 65%;
       height: 1px;
       background-color: $secondary_text_color;
-      margin: 15px 0 0 35px;
+      margin: 15px 0 0 70px;
     }
   }
 
@@ -154,6 +194,48 @@ export default {
     width: 40%;
     color: $secondary_text_color;
     line-height: 35px;
+  }
+}
+
+.doctors_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.doctor_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: calc(100% / 3);
+  padding: 30px;
+
+  h4 {
+    font-size: 30px;
+    font-weight: 300;
+    color: #081425;
+    padding: 10px;
+  }
+
+  h5 {
+    font-size: 25px;
+    font-weight: 300;
+    color: #081425;
+    padding: 10px;
+  }
+
+  p {
+    color: $secondary_text_color;
+    line-height: 35px;
+    padding: 10px;
+  }
+  
+  i {
+    margin-right: 5px;
+    margin-top: 10px;
+    font-size: 25px;
+    padding: 10px;
   }
 }
 </style>
