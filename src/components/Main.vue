@@ -48,6 +48,7 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?</p>
         </div>
         <div class="services_bottom">
+          <!-- CICLO V-FOR PER GENERARE LE CARTE DEI SERVIZI -->
           <div v-for="(service, index) in services" :key="index" class="service">
             <img :src="require(`../${service.img}`)" alt="immagine">
             <h3>{{service.title}}</h3>
