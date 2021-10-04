@@ -77,7 +77,16 @@
       </div>
       <div class="facilities_bottom">
         <div class="facilities_form wrapper">
-          
+          <h2>Make An Appointment</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?</p>
+          <form action="#">
+            <input type="text" placeholder="Name"> 
+            <input type="email" placeholder="E-mail">
+            <input type="number" placeholder="Phone Number">
+            <input type="date">
+            <textarea name="" id="" cols="30" rows="10" placeholder="How can I help?"></textarea>
+            <button type="submit">Make An Appointment</button>
+          </form>
         </div>
         <div class="facilities_partners">
 
@@ -457,5 +466,73 @@ export default {
     }
   }
 
+}
+
+.facilities_bottom {
+  width: 100%;
+  background-image: url('../assets/img/make-an-appointment.jpg');
+
+  .facilities_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+
+    h2 {
+      font-size: 50px;
+      font-weight: 300;
+      color: $primary_text_color;
+      text-transform: uppercase;
+      margin: 20px 0 30px;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 65%;
+        height: 1px;
+        background-color: $primary_text_color;
+        margin: 15px 0 0 70px;
+      }
+    }
+
+    p {
+      width: 40%;
+      color: $primary_text_color;
+      line-height: 35px;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+
+      input {
+        width: calc((100% / 2) - 10px);
+        background-color: transparent;
+        border: 1px solid white;
+        padding: 20px;
+        margin: 5px
+      }
+
+      textarea {
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid white;
+        padding: 20px;
+        margin: 5px;
+      }
+
+      button {
+        color: white;
+        padding: 15px 30px;
+        background-color: #39afbb;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin: 5px;
+      }
+    }
+  }
 }
 </style>
