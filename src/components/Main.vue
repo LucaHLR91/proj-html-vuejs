@@ -58,7 +58,19 @@
       </div>
     </section>
     <section id="facilities">
+      <div class="facilities_top">
+        <div class="facilities_info">
+          <div class="wrapper">
+            
+          </div>
+        </div>
+        <div class="facilities_exellence">
 
+        </div>
+      </div>
+      <div class="facilities_bottom">
+
+      </div>
     </section>
   </main>
 </template>
