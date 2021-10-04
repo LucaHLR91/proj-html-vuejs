@@ -7,6 +7,7 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius distinctio iste officiis dolorem minus itaque accusamus veritatis assumenda! Consectetur impedit consequatur provident. Accusamus accusantium excepturi veritatis eos neque eaque asperiores.</p>
         </div>
         <div class="welcome_bottom">
+          <!-- CICLO FOR PER GENERARE LE INFO DI BENVENUTO -->
           <div v-for="(welcome_item, index) in welcome_bottom" :key="index" class="welcome_info">
             <img :src="require(`../${welcome_item.img}`)" alt="immagine">
             <h3>{{welcome_item.title}}</h3>
@@ -24,6 +25,7 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?</p>
         </div>
         <div class="doctors_bottom">
+          <!-- CICLO FOR PER GENERARE LE CARD DEI DOTTORI -->
           <div v-for="(doctor, index) in doctors" :key="index" class="doctor_card">
             <img :src="require(`../${doctor.img}`)" alt="immagine">
             <h4>{{doctor.name}}</h4>
@@ -39,7 +41,16 @@
       </div>
     </section>
     <section id="services">
+      <div class="wrapper">
+        <div class="services_top">
+          <img src="../assets/img/icon-6.png" alt="icon">
+          <h2>Our Health Services</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?</p>
+        </div>
+        <div class="services_bottom">
 
+        </div>
+      </div>
     </section>
     <section id="facilities">
 
@@ -236,6 +247,38 @@ export default {
     margin-top: 10px;
     font-size: 25px;
     padding: 10px;
+  }
+}
+
+.services_top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+
+  h2 {
+    font-size: 50px;
+    font-weight: 300;
+    color: $primary_title_color;
+    text-transform: uppercase;
+    margin: 20px 0 30px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 65%;
+      height: 1px;
+      background-color: $secondary_text_color;
+      margin: 15px 0 0 70px;
+    }
+  }
+
+  p {
+    width: 40%;
+    color: $secondary_text_color;
+    line-height: 35px;
   }
 }
 </style>
