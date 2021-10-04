@@ -89,7 +89,9 @@
           </form>
         </div>
         <div class="facilities_partners">
-
+          <div v-for="(partner, index) in partners" :key="index" class="partners">
+            <img :src="require(`../${partner}`)" alt="partner">
+          </div>
         </div>
       </div>
     </section>
@@ -203,6 +205,12 @@ export default {
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus',
             background: 'pelourous_blue',
           },
+        ],
+        partners: [
+          'assets/img/client-logos-1-200x188.png',
+          'assets/img/client-logos-2-200x188.png',
+          'assets/img/client-logos-3-200x188.png',
+          'assets/img/client-logos-4-200x188.png',
         ]
       }
     }
@@ -478,7 +486,7 @@ export default {
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    padding: 40px;
+    padding: 60px;
 
     h2 {
       font-size: 50px;
@@ -501,6 +509,7 @@ export default {
       width: 40%;
       color: $primary_text_color;
       line-height: 35px;
+      margin-bottom: 20px;
     }
 
     form {
@@ -531,8 +540,16 @@ export default {
         cursor: pointer;
         width: 100%;
         margin: 5px;
+        text-transform: uppercase;
       }
     }
+  }
+
+  .facilities_partners {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url('../assets/img/rgb-gradient-bar-for-logo-carrasel.jpg');
   }
 }
 </style>

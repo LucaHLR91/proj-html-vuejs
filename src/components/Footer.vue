@@ -93,6 +93,7 @@ export default {
 footer {
   width: 100%;
   height: 500px;
+  padding: 50px;
 
   .footer_top {
     display: flex;
