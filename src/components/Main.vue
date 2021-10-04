@@ -550,6 +550,8 @@ export default {
     justify-content: space-around;
     align-items: center;
     background-image: url('../assets/img/rgb-gradient-bar-for-logo-carrasel.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 </style>

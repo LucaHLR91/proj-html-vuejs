@@ -148,6 +148,15 @@ footer {
       h4 {
         margin-bottom: 50px;
         text-transform: uppercase;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 30px;
+          height: 2px;
+          background-color: $brand_color;
+          margin-top: 20px
+        }
       }
 
       i {
@@ -163,6 +172,15 @@ footer {
       h4 {
         margin-bottom: 50px;
         text-transform: uppercase;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 30px;
+          height: 2px;
+          background-color: $brand_color;
+          margin-top: 20px
+        }
       }
 
       ul {
@@ -212,7 +230,15 @@ footer {
       p {
         margin: 0 5px;
         padding: 0 5px;
-        border-right: 1px solid $secondary_text_color;
+        
+        &:after {
+          content: '';
+          width: 1px;
+          height: 12px;
+          display: inline-block;
+          margin-left: 5px;
+          background-color: $secondary_text_color;
+        }
       }
     }
   }
