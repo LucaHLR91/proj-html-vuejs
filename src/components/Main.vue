@@ -48,7 +48,11 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?</p>
         </div>
         <div class="services_bottom">
-
+          <div v-for="(service, index) in services" :key="index" class="service">
+            <img :src="require(`../${service.img}`)" alt="immagine">
+            <h3>{{service.title}}</h3>
+            <p>{{service.text}}</p>
+          </div>
         </div>
       </div>
     </section>
@@ -113,7 +117,39 @@ export default {
             instagram: 'fab fa-instagram-square',
             img: 'assets/img/doctor-3.jpg',
           },
-        ]
+        ],
+        services: [
+          {
+            title: 'Rehabilitation center',
+            img: 'assets/img/icon-14.png',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?',
+          },
+          {
+            title: 'Dental Implants',
+            img: 'assets/img/icon-15.png',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?',
+          },
+          {
+            title: 'Medicine Research',
+            img: 'assets/img/icon-16.png',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?',
+          },
+          {
+            title: 'Blood Bank',
+            img: 'assets/img/icon-11.png',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?',
+          },
+          {
+            title: 'Pharmaceutical advice',
+            img: 'assets/img/icon-12.png',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?',
+          },
+          {
+            title: 'Medical counceling',
+            img: 'assets/img/icon-13.png',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quibusdam consequuntur error itaque, nostrum explicabo harum sint? Molestiae praesentium voluptatibus fugiat perferendis cum sequi hic, unde deleniti modi iste aperiam?',
+          },
+        ],
       }
     }
 }
@@ -279,6 +315,29 @@ export default {
     width: 40%;
     color: $secondary_text_color;
     line-height: 35px;
+  }
+}
+
+.services_bottom {
+  display: flex;
+  flex-wrap: wrap;
+
+  .service {
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 20px;
+
+    h3 {
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $primary_title_color;
+      padding: 10px 0;
+    }
+
+    p {
+      line-height: 40px;
+      color: $secondary_text_color;
+    }
   }
 }
 </style>
