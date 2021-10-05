@@ -48,7 +48,7 @@
 
         <div class="footer_help">
           <div class="support">
-            
+            <i class="fas fa-angle-up"></i>
           </div>
         </div>
       </section>
@@ -93,7 +93,6 @@ export default {
 footer {
   width: 100%;
   height: 500px;
-  padding: 50px;
 
   .footer_top {
     display: flex;
@@ -101,6 +100,7 @@ footer {
     align-items: flex-start;
     height: 90%;
     color: $secondary_text_color;
+    padding: 50px;
 
     .footer_brand_info {
       width: calc(100% / 3);
@@ -212,6 +212,7 @@ footer {
   }
 
   .footer_bottom {
+    position: relative;
     width: 100%;
     height: 10%;
     background-color: #f1efef;
@@ -240,6 +241,20 @@ footer {
           background-color: $secondary_text_color;
         }
       }
+    }
+
+    .footer_help {
+      position: absolute;
+      bottom: 0;
+      right: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 30px;
+      background-color: #474747;
+      color: white;
+      border-radius: 5px 5px 0 0;
     }
   }
 }
